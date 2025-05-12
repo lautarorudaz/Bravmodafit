@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+ <header>
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+    </div>
+
+    <!-- Menú de navegación (centrado) -->
+    <nav class="nav">
+      <a href="#" class="ofertas">Ofertas</a>
+      <a href="#">Deportivo</a>
+      <a href="#">Moda</a>
+      <a href="#">Calzas</a>
+    </nav>
+
+    <!-- Parte derecha -->
+    <div class="right-section">
+      <div class="search-bar">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Buscar">
+      </div>
+      <span class="icon">🛍️</span>
+      <span class="menu-toggle" onclick="openMenu()">☰</span>
+    </div>
+  </div>
+</header>
+
+<!-- MENÚ LATERAL MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <header>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+    </div>
+    <span class="menu-close" onclick="closeMenu()">✕</span>
+  </header>
+  <nav class="menu-links">
+    <a href="#" class="ofertas">Ofertas</a>
+    <a href="#">Deportivo</a>
+    <a href="#">Mujer</a>
+    <a href="#">Calzas</a>
+    
+  </nav>
+</div>
+
+<div class="info-carousel">
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <div class="carousel-container">
+    <div class="carousel-text" id="carouselText">
+      <div class="text-item">Contáctanos → 362 4022456</div>
+      <div class="text-item">Hasta 6 cuotas sin interés con tarjetas seleccionadas</div>
+      <div class="text-item">¡No dudes en visitarnos!</div>
+    </div>
+  </div>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<main>
+    <section class="banner_index">
+        
+        <div><h2>Brav <br> Moda <br> Fit</h2></div>
+        <div><p>Que la moda te alcance siempre</p></div>
+
+    </section>
+
+    <div>
+        <h3>Destacado</h3>
+    </div>
+</main>
+
+<!-- JS para abrir/cerrar menú -->
+<script>
+  function openMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+  }
+</script>
+
+<script>
+  const carousel = document.getElementById("carouselText");
+  const totalSlides = document.querySelectorAll(".text-item").length;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  // Auto-slide
+  setInterval(nextSlide, 5000);
+</script>
+    
+</body>
+</html>
