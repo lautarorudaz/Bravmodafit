@@ -5,7 +5,7 @@
 
 
 header {
-  background-color: #fff;
+  background-color: #000000;
   border-bottom: 1px solid #eee;
   position: relative;
   z-index: 100;
@@ -20,7 +20,8 @@ header {
 }
 
 .logo img {
-  height: 20px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 /* Centramos la nav con position absolute y transform */
@@ -34,8 +35,8 @@ header {
 
 .nav a {
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  color: rgb(235, 114, 194);
+  font-size:20px;
   font-weight: bold;
 }
 
@@ -220,7 +221,7 @@ header {
     width: 100%;
     height: 700px;
     max-height: 700px;
-    background-image:url(/media/fondo_banner.jpg) ;
+    background-image:url(/media/mujerdefondo.jpg) ;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -232,11 +233,314 @@ header {
 }
 
 .banner_index div h2{
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ddd;
+     text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 .banner_index div p {
-    font-size: 30px;
+    font-size: 40px;
+    color: #e0d9d9;
+     text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
+
+.section-destacado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.div_ofertass{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagen_destacada img{
+  height: 90px;
+  width: 50px;
+}
+
+.container_destacado{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.card_destacado img{
+
+  height: 90px;
+  width: 50px;
+
+}
+
+
+
+
+
+
+.producto-carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  gap: 20px;
+}
+
+.producto-carousel-slide {
+  display: flex;
+  gap: 20px;
+}
+
+.producto-carousel-item {
+  flex: 0 0 auto;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+/* Estilos para el banner de oferta */
+.oferta-banner {
+  background-color: #ff6f61;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oferta-titulo-principal {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.oferta-titulo-secundario {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.oferta-descuento-texto {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.oferta-porcentaje {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.oferta-productos-mini {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.oferta-productos-mini img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Estilos para las tarjetas de producto */
+.tarjeta-producto {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.tarjeta-producto img{
+ height: 120px;
+ width: 120px;
+
+}
+.etiqueta-descuento {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.logo-marca {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-marca img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nombre-producto {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.precio-cuotas {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.precio-anterior {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.precio-actual {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.etiqueta-hot {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+
+
+
+
+
+
+
+.main-footer {
+  background-color: #f9f9f9; /* Un gris claro de fondo */
+  color: #333; /* Color de texto principal */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee; /* Línea superior sutil */
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.brand-name {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  font-size: 0.9em;
+  color: #e74c3c; /* Color rojo para el slogan */
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #007bff; /* Un azul al pasar el ratón */
+}
+
+.footer-right {
+  display: flex;
+  gap: 10px;
+}
+
+.click-here-button {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.click-here-button:hover {
+  background-color: #eee;
+}
+
+.arrow {
+  font-size: 1.2em;
+}
+
+.contact-button {
+  background-color: #e74c3c; /* Color rojo para el botón de contacto */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #c0392b; /* Un rojo más oscuro al pasar el ratón */
+}
+
+/* Opcional: Para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .main-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
